@@ -6,6 +6,8 @@
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
+@import url("https://fonts.googleapis.com/css?family=Arvo");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 html {
   line-height: 1.15;
   /* 1 */
@@ -518,6 +520,248 @@ textarea {
   padding: 0.2em 0;
 }
 
+.navigation {
+  grid-area: links;
+  background: #203236;
+}
+
+nav ul {
+  /*border:1px solid #ccc;*/
+  border-width: 1px 0;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  /* background-color:rgba(255,255,255,.6); */
+}
+
+nav li {
+  display: inline;
+  margin: 30px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  /* font-family: 'Raleway', sans-serif;
+  color:#595959; */
+}
+
+.display {
+  grid-area: display;
+  background-image: url("../img/mountains-rsz.jpg");
+  height: 610px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.display h1 {
+  font-family: "Arvo", serif;
+  color: white;
+  font-size: 5em;
+  border-bottom: 5px solid white;
+}
+.display h2 {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 2em;
+}
+
+#about {
+  grid-area: about;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  padding-bottom: 10px;
+  flex-direction: column;
+}
+#about h2 {
+  font-family: "Arvo", serif;
+  color: #203236;
+  border-bottom: 5px solid #203236;
+  text-align: center;
+  font-size: 2em;
+  margin: 15px;
+}
+#about p {
+  margin: 15px;
+  text-align: center;
+  width: 70%;
+  font-size: 1.6em;
+  flex-grow: 2;
+  font-family: "Roboto", sans-serif;
+}
+#about h3 {
+  font-family: "Arvo", serif;
+  color: #203236;
+}
+
+.trip1 {
+  grid-area: one;
+  background-image: url("../img/hawaii.jpg");
+  height: 450px;
+  border: 5px solid white;
+}
+
+.trip2 {
+  grid-area: two;
+  background-image: url("../img/slovenia-rsz.jpg");
+  height: 450px;
+  border-top: 5px solid white;
+  border-right: 5px solid white;
+  border-bottom: 5px solid white;
+}
+
+.trip3 {
+  grid-area: three;
+  background-image: url("../img/hungary-rsz.jpg");
+  height: 450px;
+  border: 5px solid white;
+}
+
+.trip4 {
+  grid-area: four;
+  background-image: url("../img/italy-rsz.jpg");
+  height: 450px;
+  border-top: 5px solid white;
+  border-right: 5px solid white;
+  border-bottom: 5px solid white;
+}
+
+.trip1, .trip2, .trip3, .trip4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.trip1 a, .trip2 a, .trip3 a, .trip4 a {
+  color: white;
+  padding: 10px;
+  font-size: 2em;
+  font-family: "Arvo", serif;
+  text-decoration: none;
+  border: 2px solid white;
+}
+
+#reviews {
+  grid-area: reviews;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#reviews h2 {
+  font-family: "Arvo", serif;
+  color: #203236;
+  border-bottom: 5px solid #203236;
+  text-align: center;
+  font-size: 2em;
+  margin: 15px;
+}
+#reviews ul {
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6em;
+  text-align: center;
+  margin: 10px;
+}
+#reviews li {
+  margin: 10px;
+}
+
+#contact {
+  grid-area: contact;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #203236;
+}
+#contact img {
+  margin: 1.5em;
+}
+
+/* .fb,.insta{
+	width:75%;
+} */
+.mail {
+  width: 76%;
+}
+
+@media screen and (max-width: 760px) {
+  nav a {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 698px) {
+  nav a {
+    font-size: 20px;
+  }
+
+  #about p {
+    font-size: 1.2em;
+  }
+
+  #reviews ul {
+    font-size: 1em;
+  }
+
+  #contact img {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 497px) {
+  nav a {
+    font-size: 18px;
+  }
+
+  .display h1 {
+    font-size: 3em;
+  }
+
+  #about h2 {
+    font-size: 1.6em;
+  }
+  #about p {
+    font-size: 1em;
+  }
+
+  #reviews h2 {
+    font-size: 1.6em;
+  }
+}
+@media screen and (max-width: 400px) {
+  nav a {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .display h1 {
+    font-size: 2.3em;
+  }
+  .display h2 {
+    font-size: 1.5em;
+  }
+}
+.site {
+  display: grid;
+  /* grid-template-columns:1fr;
+  width:100%; */
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 610px 500px 450px 450px 300px 200px;
+  grid-template-areas: "links links" "display display" "about about" "one two" "three four" "reviews reviews" "contact contact";
+}
+
+@media screen and (max-width: 400px) {
+  .site {
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 610px 500px 450px 450px 450px 450px 300px 200px;
+    grid-template-areas: "links" "display" "about" "one" "two" "three" "four" "reviews" "contact";
+  }
+}
 /*
  * Hide visually and from screen readers
  */

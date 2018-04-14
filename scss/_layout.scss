@@ -1,0 +1,33 @@
+.site{
+	display:grid;
+	/* grid-template-columns:1fr;
+	width:100%; */
+	grid-template-columns:1fr 1fr;
+	grid-template-rows:100px 610px 500px 450px 450px 300px 200px;
+	
+	grid-template-areas:
+		"links links"
+		"display display"
+		"about about"
+		"one two"
+		"three four"
+		"reviews reviews"
+		"contact contact";
+}
+
+@media screen and (max-width:400px){
+	.site{
+		grid-template-columns:1fr;
+		grid-template-rows:100px 610px 500px 450px 450px 450px 450px 300px 200px;
+		grid-template-areas:
+			"links"
+			"display"
+			"about"
+			"one"
+			"two"
+			"three"
+			"four"
+			"reviews"
+			"contact";
+	}
+}
